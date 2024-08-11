@@ -2,7 +2,7 @@
 function fetchWithPromise(endpoint) {
     return new Promise((resolve, reject) => {
         if (endpoint === '/fetch-data') {
-            resolve({ message: 'This is some data' });
+            resolve({ message: 'yoo this is soma data' });
         } else {
             reject(new Error('Invalid endpoint'));
         }
@@ -26,7 +26,7 @@ function writeFileWithPromise(filePath, content) {
     return new Promise((resolve, reject) => {
         try {
             localStorage.setItem(filePath, content);
-            resolve('File written successfully ');
+            resolve('File written successfully  ');
         } catch (error) {
             reject(new Error('Failed to write file'));
         }
@@ -72,7 +72,7 @@ document.getElementById('readFileBtn').addEventListener('click', () => {
 
 document.getElementById('writeFileBtn').addEventListener('click', () => {
     const filePath = 'file.text';   
-    const content = 'you are being watch dude!';   
+    const content = 'Thank you for taking the time to review my work.your insights are invaluable to me .';   
     document.getElementById('writeFileOutput').innerText = 'Writing file...';
     writeFileWithPromise(filePath, content)
         .then(message => {
@@ -86,4 +86,4 @@ document.getElementById('writeFileBtn').addEventListener('click', () => {
 
  
 localStorage.setItem('file.text', 'Test Content');
-console.log(localStorage.getItem('file.text')); // Should log 'Test Content'
+console.log(localStorage.getItem('file.text'));  
